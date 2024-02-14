@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-gradient-black {
+        background: rgb(50,50,50);
+        background: radial-gradient(circle, rgba(50,50,50,0.2) 0%, rgba(8,8,8,0.2) 35%, rgba(50,50,50,0.2) 65%, rgba(11,11,11,0.2) 100%);
+    }
+
+    .bg-transparent-purple {
+        background: rgb(126,37,159);
+        background: radial-gradient(circle, rgba(126,37,159,0.6) 0%, rgba(90,29,112,0.6) 100%);
+    }
+
+    .aspect-card {
+        aspect-ratio: 2 / 3;
+    }
+
+    .aspect-square-card {
+        aspect-ratio: 4 / 5;
+    }
+  }
