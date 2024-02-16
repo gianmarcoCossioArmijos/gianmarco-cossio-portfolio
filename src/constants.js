@@ -70,8 +70,8 @@ export const GLOBAL_DARK = "cursor-default w-full min-h-screen p-4 flex flex-col
 export const NAV_BORDER_LIGHT = "w-full md:w-3/4 p-3 flex gap-4 bg-gradient-black border-[1.5px] border-black rounded-full";
 export const NAV_BORDER_DARK = "w-full md:w-3/4 p-3 flex gap-4 bg-gradient-black border border-white rounded-full";
 
-export const PHOTO_BORDER_LIGHT = "w-full md:w-2/6 flex justify-center gap-6 bg-art bg-center-bottom border-[1.5px] border-black rounded-[30px] animate-fade-right animate-duration-[1200ms] animate-ease-in animate-normal animate-fill-forwards";
-export const PHOTO_BORDER_DARK = "w-full md:w-2/6 flex justify-center gap-6 bg-art bg-center-bottom border border-white rounded-[30px] animate-fade-right animate-duration-[1200ms] animate-ease-in animate-normal animate-fill-forwards";
+export const PHOTO_BORDER_LIGHT = "w-full md:w-2/6 flex justify-center gap-6 bg-backgroundArt bg-center-bottom border-[1.5px] border-black rounded-[30px] animate-fade-right animate-duration-[1200ms] animate-ease-in animate-normal animate-fill-forwards";
+export const PHOTO_BORDER_DARK = "w-full md:w-2/6 flex justify-center gap-6 bg-backgroundArt bg-center-bottom border border-white rounded-[30px] animate-fade-right animate-duration-[1200ms] animate-ease-in animate-normal animate-fill-forwards";
 
 export const HERO_LIGHT = "w-full md:w-4/6 flex flex-col md:flex-row justify-center items-center bg-gradient-black border-[1.5px] border-black rounded-[30px] animate-fade-left animate-duration-[1200ms] animate-ease-in animate-normal animate-fill-forwards animate-delay-[200ms]";
 export const HERO_DARK = "w-full md:w-4/6 flex flex-col md:flex-row justify-center items-center bg-gradient-black border border-white rounded-[30px] animate-fade-left animate-duration-[1200ms] animate-ease-in animate-normal animate-fill-forwards animate-delay-[200ms]";
