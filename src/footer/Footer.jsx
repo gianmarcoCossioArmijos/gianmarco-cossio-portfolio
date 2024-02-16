@@ -8,7 +8,7 @@ const Footer = () => {
 
         <img src={logo} alt='logo' className='w-[30px] h-[30px]'/>
 
-        <p className='text-center'>
+        <p className='text-center text-sm'>
             Hecho por Gianmarco Cossio - 2024
         </p>
 

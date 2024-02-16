@@ -12,7 +12,7 @@ const Navigator = () => {
         <img src={logo} alt='logo' className='w-[30px] h-[30px]'/>
 
         <div className='w-full flex gap-4 justify-center items-center'>
-          <a href="#" className='hover:text-[#9336B4]'>home</a>
+          <a href="#" className='hover:text-[#9336B4] cursor-pointer'>home</a>
           <a href="#skills" className='hover:text-[#9336B4]'>skills</a>
           <a href="#projects" className='hover:text-[#9336B4]'>projects</a>
         </div>

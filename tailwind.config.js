@@ -11,7 +11,11 @@ export default {
         futurespore: ['futurespore']
       },
       backgroundImage: {
-        backgroundArt: "url('src/images/fondo_bw.png')",
+        backgroundArt: "url('/src/images/fondo_bw.png')",
+      },
+      cursor: {
+        default: 'url(https://i.postimg.cc/dth7XWRp/favicon-32x32.png), default',
+        pointer: 'url(https://i.postimg.cc/wMHRyJ1z/pointer-32x32.png), pointer',
       },
     },
   },
