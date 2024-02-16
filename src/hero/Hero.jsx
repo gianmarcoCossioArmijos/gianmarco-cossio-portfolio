@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <hero className='w-full flex flex-col sm:flex-row gap-4 justify-between'>
 
-        <section className='w-full md:w-2/6 flex justify-center gap-6 bg-backgroundArt bg-center-bottom border border-white rounded-[30px]
+        <section className='w-full md:w-2/6 flex justify-center gap-6 bg-art bg-center-bottom border border-white rounded-[30px]
                             animate-fade-right animate-duration-[1200ms] animate-ease-in animate-normal animate-fill-forwards'>
 
             <img src={photo} alt="photo" className='w-[300px] md:w-[350px] object-cover grayscale grayscale-[100%]'/>
