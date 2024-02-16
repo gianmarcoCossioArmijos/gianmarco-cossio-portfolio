@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector  } from "react-redux"
 
 import keysaver from '../images/keysaver_card.png';
 import tresenraya from '../images/tresenraya_card.png';
@@ -11,15 +12,37 @@ import seguridad from '../images/jaen-seguro.png';
 import { FaRegEye } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
 
-const Projects = () => {
-  return (
-    <section id='projects' className='p-4 flex flex-col sm:flex-row flex-wrap sm:justify-evenly gap-4 border border-white rounded-[30px]'>
+import {PROJECTS_KEYSAVER_ES, PROJECTS_KEYSAVER_EN} from '../constants'
+import {PROJECTS_TITLE_EN, PROJECTS_TITLE_ES} from '../constants'
+import {PROJECTS_TICTACTOE_TITLE_EN, PROJECTS_TICTACTOE_TILE_ES} from '../constants'
+import {PROJECTS_TICTACTOE_ES, PROJECTS_TICTACTOE_EN} from '../constants'
+import {PROJECTS_TITLE_DENGUE_ES, PROJECTS_TITLE_DENGUE_EN} from '../constants'
+import {PROJECTS_DENGUE_ES, PROJECTS_DENGUE_EN} from '../constants'
+import {PROJECTS_TITLE_BIBLIOTECA_ES, PROJECTS_TITLE_BIBLIOTECA_EN} from '../constants'
+import {PROJECTS_BIBLIOTECA_ES, PROJECTS_BIBLIOTECA_EN} from '../constants'
+import {PROJECTS_TITLE_LIBRARY_ES, PROJECTS_TITLE_LIBRARY_EN} from '../constants'
+import {PROJECTS_LIBRARY_ES, PROJECTS_LIBRARY_EN} from '../constants'
+import {PROJECTS_TITLE_CURSOS_ES, PROJECTS_TITLE_CURSOS_EN} from '../constants'
+import {PROJECTS_CURSOS_ES, PROJECTS_CURSOS_EN} from '../constants'
+import {PROJECTS_TITLE_SEGURIDAD_ES, PROJECTS_TITLE_SEGURIDAD_EN} from '../constants'
+import {PROJECTS_SEGURIDAD_ES, PROJECTS_SEGURIDAD_EN} from '../constants';
+import {PROJECTS_DARK, PROJECTS_LIGHT} from '../constants';
+import {PROJECTS_TITLE_DARK, PROJECTS_TITLE_LIGHT} from '../constants';
+import {PROJECTS_CARD_DARK, PROJECTS_CARD_LIGHT} from '../constants';
 
-        <h4 className='w-full my-4 pt-2 pl-2 font-futurespore bg-[#9336B4] text-xl text-center border border-white rounded-full'>
-            Proyectos
+const Projects = () => {
+
+    const lang = useSelector((state) => state.language);
+    const theme = useSelector((state) => state.theme);
+
+  return (
+    <section id='projects' className={ theme == "dark" ? PROJECTS_DARK : PROJECTS_LIGHT }>
+
+        <h4 className={ theme == "dark" ? PROJECTS_TITLE_DARK : PROJECTS_TITLE_LIGHT }>
+            { lang == "es" ? PROJECTS_TITLE_ES : PROJECTS_TITLE_EN }
         </h4>
 
-        <article className='w-full sm:w-[300px] rounded-lg border border-white relative'>
+        <article className={ theme == "dark" ? PROJECTS_CARD_DARK : PROJECTS_CARD_LIGHT }>
             <img src={keysaver}
                  alt="keysaver"
                  className='rounded-lg aspect-card sm:aspect-square-card object-cover object-top'/>
@@ -30,10 +53,7 @@ const Projects = () => {
                 </h6>
 
                 <p className='py-2 text-xs sm:text-sm text-[#808080]'>
-                    Web MVC generadora de contraseñas seguras, 
-                    y minisistema gestor de contraseñas. Metodos 
-                    CRUD para las contraseñas, y metodos para 
-                    crear y editar usuarios.
+                    { lang == "es" ? PROJECTS_KEYSAVER_ES : PROJECTS_KEYSAVER_EN }
                 </p>
 
                 <p className='py-2 text-xs sm:text-sm'>
@@ -56,18 +76,18 @@ const Projects = () => {
             </div>
         </article>
 
-        <article className='w-full sm:w-[300px] rounded-lg border border-white relative'>
+        <article className={ theme == "dark" ? PROJECTS_CARD_DARK : PROJECTS_CARD_LIGHT }>
             <img src={tresenraya}
                  alt="tresenraya"
                  className='rounded-lg aspect-card sm:aspect-square-card object-cover object-top'/>
 
             <div className='p-4 absolute top-0 bottom-0 left-0 right-0 opacity-[0%] hover:opacity-[100%] hover:bg-black ease-out duration-500 rounded-lg'>
                 <h6 className='py-2 text-md sm:text-lg font-bold text-[#9336B4] border-b border-white'>
-                    Tres en Raya
+                    { lang == "es" ? PROJECTS_TICTACTOE_TILE_ES : PROJECTS_TICTACTOE_TITLE_EN }
                 </h6>
 
                 <p className='py-2 text-xs sm:text-sm text-[#808080]'>
-                    Juego MVC tres en raya o tic tac toe para dos jugadores.
+                    { lang == "es" ? PROJECTS_TICTACTOE_ES : PROJECTS_TICTACTOE_EN }
                 </p>
 
                 <p className='py-2 text-xs sm:text-sm'>
@@ -90,22 +110,18 @@ const Projects = () => {
             </div>
         </article>
 
-        <article className='w-full sm:w-[300px] rounded-lg border border-white relative'>
+        <article className={ theme == "dark" ? PROJECTS_CARD_DARK : PROJECTS_CARD_LIGHT }>
             <img src={dengue}
                  alt="dengue"
                  className='rounded-lg aspect-card sm:aspect-square-card object-cover object-top'/>
 
             <div className='p-4 absolute top-0 bottom-0 left-0 right-0 opacity-[0%] hover:opacity-[100%] hover:bg-black ease-out duration-500 rounded-lg'>
                 <h6 className='py-2 text-md sm:text-lg font-bold text-[#9336B4] border-b border-white'>
-                    Casos de Dengue
+                    { lang == "es" ? PROJECTS_TITLE_DENGUE_ES : PROJECTS_TITLE_DENGUE_EN }
                 </h6>
 
                 <p className='py-2 text-xs sm:text-sm text-[#808080]'>
-                    Web MVC de reporte de casos Dengue. Muestra los 
-                    casos globales, y por distrito, que estan 
-                    divididos en graves, con sintomas, 
-                    sin sintomas y fallecidos. Tambien cuenta con 
-                    un test rapido de Dengue.
+                    { lang == "es" ? PROJECTS_DENGUE_ES: PROJECTS_DENGUE_EN }
                 </p>
 
                 <p className='py-2 text-xs sm:text-sm'>
@@ -128,20 +144,18 @@ const Projects = () => {
             </div>
         </article>
 
-        <article className='w-full sm:w-[300px] rounded-lg border border-white relative'>
+        <article className={ theme == "dark" ? PROJECTS_CARD_DARK : PROJECTS_CARD_LIGHT }>
             <img src={biblioteca}
                  alt="biblioteca"
                  className='rounded-lg aspect-card sm:aspect-square-card object-cover object-top'/>
 
             <div className='p-4 absolute top-0 bottom-0 left-0 right-0 opacity-[0%] hover:opacity-[100%] hover:bg-black ease-out duration-500 rounded-lg'>
                 <h6 className='py-2 text-md sm:text-lg font-bold text-[#9336B4] border-b border-white'>
-                    Biblioteca App
+                    { lang == "es" ? PROJECTS_TITLE_BIBLIOTECA_ES: PROJECTS_TITLE_BIBLIOTECA_EN }
                 </h6>
 
                 <p className='py-2 text-xs sm:text-sm text-[#808080]'>
-                    Web de biblioteca virtual consumiendo Api de 
-                    Google Books, la cual busca los textos de 
-                    acuerdo al titulo
+                    { lang == "es" ? PROJECTS_BIBLIOTECA_ES: PROJECTS_BIBLIOTECA_EN }
                 </p>
 
                 <p className='py-2 text-xs sm:text-sm'>
@@ -164,21 +178,18 @@ const Projects = () => {
             </div>
         </article>
 
-        <article className='w-full sm:w-[300px] rounded-lg border border-white relative'>
+        <article className={ theme == "dark" ? PROJECTS_CARD_DARK : PROJECTS_CARD_LIGHT }>
             <img src={library}
                  alt="library"
                  className='rounded-lg aspect-card sm:aspect-square-card object-cover object-top'/>
 
             <div className='p-4 absolute top-0 bottom-0 left-0 right-0 opacity-[0%] hover:opacity-[100%] hover:bg-black ease-out duration-500 rounded-lg'>
                 <h6 className='py-2 text-md sm:text-lg font-bold text-[#9336B4] border-b border-white'>
-                    Online Library
+                    { lang == "es" ? PROJECTS_TITLE_LIBRARY_ES: PROJECTS_TITLE_LIBRARY_EN }
                 </h6>
 
                 <p className='py-2 text-xs sm:text-sm text-[#808080]'>
-                    Biblioteca Virtual con cuatro secciones 
-                    de textos, buscador de textos por titulo, 
-                    detalles, y enlace a lectura. Ademas 
-                    seccion de administracion, con CRUDs.
+                    { lang == "es" ? PROJECTS_LIBRARY_ES: PROJECTS_LIBRARY_EN }
                 </p>
 
                 <p className='py-2 text-xs sm:text-sm'>
@@ -201,21 +212,18 @@ const Projects = () => {
             </div>
         </article>
 
-        <article className='w-full sm:w-[300px] rounded-lg border border-white relative'>
+        <article className={ theme == "dark" ? PROJECTS_CARD_DARK : PROJECTS_CARD_LIGHT }>
             <img src={cursos}
                  alt="cursos"
                  className='rounded-lg aspect-card sm:aspect-square-card object-cover object-top'/>
 
             <div className='p-4 absolute top-0 bottom-0 left-0 right-0 opacity-[0%] hover:opacity-[100%] hover:bg-black ease-out duration-500 rounded-lg'>
                 <h6 className='py-2 text-md sm:text-lg font-bold text-[#9336B4] border-b border-white'>
-                    Cursos Virtuales
+                    { lang == "es" ? PROJECTS_TITLE_CURSOS_ES: PROJECTS_TITLE_CURSOS_EN }
                 </h6>
 
                 <p className='py-2 text-xs sm:text-sm text-[#808080]'>
-                    Proyecto freelance de Web de Cursos Virtuales. 
-                    Contiene CRUDs de administracion de textos y usuarios, 
-                    Reproductor de cursos, buscador por titulo y compra
-                    de cursos.
+                    { lang == "es" ? PROJECTS_CURSOS_ES: PROJECTS_CURSOS_EN }
                 </p>
 
                 <p className='py-2 text-xs sm:text-sm'>
@@ -238,20 +246,18 @@ const Projects = () => {
             </div>
         </article>
 
-        <article className='w-full sm:w-[300px] rounded-lg border border-white relative'>
+        <article className={ theme == "dark" ? PROJECTS_CARD_DARK : PROJECTS_CARD_LIGHT }>
             <img src={seguridad}
                  alt="seguridad"
                  className='rounded-lg aspect-card sm:aspect-square-card object-cover object-top'/>
 
             <div className='p-4 absolute top-0 bottom-0 left-0 right-0 opacity-[0%] hover:opacity-[100%] hover:bg-black ease-out duration-500 rounded-lg'>
                 <h6 className='py-2 text-md sm:text-lg font-bold text-[#9336B4] border-b border-white'>
-                    Jaen Seguro
+                    { lang == "es" ? PROJECTS_TITLE_SEGURIDAD_ES: PROJECTS_TITLE_SEGURIDAD_EN }
                 </h6>
 
                 <p className='py-2 text-xs sm:text-sm text-[#808080]'>
-                    Aplicacion web de denuncias de seguridad 
-                    ciudadana. Cuenta con CRUDs de Usuarios, 
-                    vehiculos, unidades, noticias y denuncias.
+                    { lang == "es" ? PROJECTS_SEGURIDAD_ES: PROJECTS_SEGURIDAD_EN }
                 </p>
 
                 <p className='py-2 text-xs sm:text-sm'>

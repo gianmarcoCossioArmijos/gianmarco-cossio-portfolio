@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector  } from "react-redux"
 
 import { IoLogoHtml5 } from "react-icons/io5";
 import { IoLogoCss3 } from "react-icons/io5";
@@ -25,30 +26,38 @@ import { SiMicrosoftsqlserver } from "react-icons/si";
 import { SiBootstrap } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 
+import {SKILLS_TITLE_EN, SKILLS_TITLE_ES} from '../constants';
+import {SKILLS_DESC_EN, SKILLS_DESC_ES} from '../constants';
+import {SKILLS_BD_EN, SKILLS_BD_ES} from '../constants';
+import {SKILLS_CONTACT_EN, SKILLS_CONTACT_ES} from '../constants';
+import {SKILLS_DARK, SKILLS_LIGHT} from '../constants';
+import {SKILLS_DIVISION_DARK, SKILLS_DIVISION_LIGHT} from '../constants';
+import {SKILLS_TITLE_DARK, SKILLS_TITLE_LIGHT} from '../constants';
+import {SKILLS_ICONS_DARK, SKILLS_ICONS_LIGHT} from '../constants';
+import {SKILLS_ICON_DARK, SKILLS_ICON_LIGHT} from '../constants';
+
 const Skills = () => {
+
+  const lang = useSelector((state) => state.language);
+  const theme = useSelector((state) => state.theme);
+
   return (
-    <section id='skills' className='p-4 md:p-8 flex flex-col md:flex-row justify-center items-center bg-gradient-black border border-white rounded-[30px]'>
+    <section id='skills' className={ theme == "dark" ? SKILLS_DARK : SKILLS_LIGHT }>
 
-        <div className='pb-8 pt-4 px-4 flex flex-col justify-center border-b md:border-none border-white'>
+        <div className={ theme == "dark" ? SKILLS_DIVISION_DARK : SKILLS_DIVISION_LIGHT }>
 
-          <h4 className='w-full pt-2 pl-2 font-futurespore bg-[#9336B4] text-xl text-center border border-white rounded-full'>
-              Habilidades
+          <h4 className={ theme == "dark" ? SKILLS_TITLE_DARK : SKILLS_TITLE_LIGHT }>
+            { lang == "es" ? SKILLS_TITLE_ES : SKILLS_TITLE_EN }
           </h4>
 
           <p className='pt-4 sm:pt-8 md:pb-4 text-sm md:text-md'>
-            Cuento con experiencia desarrollando APIs REST, 
-            con tecnologias como Spring, Flask y Django, utilizando
-            ORMs o querys. Por el lado del frontend trabajo 
-            consumiendo APIS con React y sus librerias relacionadas. 
-            Para estilizar uso Tailwind, o CSS y SASS.
+            { lang == "es" ? SKILLS_DESC_ES : SKILLS_DESC_EN }
             <br />
 
-            En base de Datos manejo MySQL, SQLServer, Postgres e Informix.
-            Ademas de herramientas de diseño grafico como Photoshop 
-            e Illustrator.
+            { lang == "es" ? SKILLS_BD_ES : SKILLS_BD_EN }
             <br />
 
-            Si deseas mas informacion puedes contactarme a traves de
+            { lang == "es" ? SKILLS_CONTACT_ES: SKILLS_CONTACT_EN }
             <a className='w-fit px-2 font-bold text-lg text-[#9336B4] hover:opacity-80'
                href="https://www.linkedin.com/in/marco-cossio-1a3b02296"
                target='blank'>
@@ -58,32 +67,32 @@ const Skills = () => {
 
         </div>
 
-        <div className='pt-8 pb-4 px-4 flex flex-row flex-wrap gap-2 justify-between md:border-l md:border-white'>
+        <div className={ theme == "dark" ? SKILLS_ICONS_DARK : SKILLS_ICONS_LIGHT }>
 
-          <IoLogoHtml5 className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <IoLogoCss3 className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <IoLogoSass className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <BiLogoJava className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <BiLogoSpringBoot className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiHibernate className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiMysql className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <FaGitAlt className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <GrGithub className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <IoLogoJavascript className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <IoLogoReact className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <BiLogoFirebase className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiRedux className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <BiLogoTailwindCss className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiVite className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <BiLogoPostgresql className='w-[80px] h-[80px] sm:w-[90px] lg:w-[110px] lg:h-[110px] sm:h-[90px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiPython className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiFlask className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <DiDjango className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiSwagger className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiThymeleaf className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiMicrosoftsqlserver className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiBootstrap className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
-          <SiPostman className='w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] lg:w-[110px] lg:h-[110px] p-4 bg-white/5 order border-white rounded-lg'/>
+          <IoLogoHtml5 className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <IoLogoCss3 className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <IoLogoSass className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <BiLogoJava className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <BiLogoSpringBoot className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiHibernate className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiMysql className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <FaGitAlt className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <GrGithub className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <IoLogoJavascript className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <IoLogoReact className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <BiLogoFirebase className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiRedux className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <BiLogoTailwindCss className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiVite className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <BiLogoPostgresql className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiPython className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiFlask className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <DiDjango className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiSwagger className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiThymeleaf className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiMicrosoftsqlserver className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiBootstrap className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
+          <SiPostman className={ theme == "dark" ? SKILLS_ICON_DARK : SKILLS_ICON_LIGHT}/>
 
         </div>
 

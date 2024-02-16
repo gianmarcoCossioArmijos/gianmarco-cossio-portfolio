@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+
 import Navigator from '../src/header/Navigator'
 import Hero from '../src/hero/Hero'
 import BackgroundArt from '../src/hero/BackgroundArt'
@@ -7,30 +10,43 @@ import Projects from './projects/Projects'
 import Footer from './footer/Footer'
 import Button from './buttom/Button'
 
+import {GLOBAL_LIGHT, GLOBAL_DARK} from '../src/constants'
+import { setTheme } from '../src/store/theme';
+
 function App() {
+  const [language, setLanguage] = useState("es");
+  const [theme, setTheme] = useState("dark");
+
+  const currentTheme = useSelector((state) => state.theme);
+
+  useEffect(() => {
+
+    localStorage.setItem("language", language);
+    localStorage.setItem("theme", theme);
+  }, [])
 
   return (
-    <main className='cursor-default w-full min-h-screen p-4 flex flex-col gap-2 bg-[#010101] font-mono text-white relative'>
+      <main className={ currentTheme == 'dark' ? GLOBAL_DARK : GLOBAL_LIGHT }>
 
-      <Button />
+        <Button />
 
-      <Navigator />
+        <Navigator />
 
-      <Hero />
+        <Hero />
 
-      <About />
+        <About />
 
-      <BackgroundArt />
+        <BackgroundArt />
 
-      <Skills />
+        <Skills />
 
-      <br />
+        <br />
 
-      <Projects />
+        <Projects />
 
-      <Footer />
+        <Footer />
 
-    </main>
+      </main>
   )
 }
 
