@@ -56,7 +56,7 @@ const Projects = () => {
                     { lang == "es" ? PROJECTS_KEYSAVER_ES : PROJECTS_KEYSAVER_EN }
                 </p>
 
-                <p className='py-2 text-xs sm:text-sm'>
+                <p className='py-2 text-xs sm:text-sm text-white'>
                     Java / Servlets / JSP / JSTL / MySQL / Tailwind
                 </p>
 
@@ -90,7 +90,7 @@ const Projects = () => {
                     { lang == "es" ? PROJECTS_TICTACTOE_ES : PROJECTS_TICTACTOE_EN }
                 </p>
 
-                <p className='py-2 text-xs sm:text-sm'>
+                <p className='py-2 text-xs sm:text-sm text-white'>
                     Java / Spring / JSP / JSTL
                 </p>
 
@@ -124,7 +124,7 @@ const Projects = () => {
                     { lang == "es" ? PROJECTS_DENGUE_ES: PROJECTS_DENGUE_EN }
                 </p>
 
-                <p className='py-2 text-xs sm:text-sm'>
+                <p className='py-2 text-xs sm:text-sm text-white'>
                     Java / Spring / Spring Boot / Hybernate / Thymeleaf / SASS / MySQL
                 </p>
 
@@ -158,7 +158,7 @@ const Projects = () => {
                     { lang == "es" ? PROJECTS_BIBLIOTECA_ES: PROJECTS_BIBLIOTECA_EN }
                 </p>
 
-                <p className='py-2 text-xs sm:text-sm'>
+                <p className='py-2 text-xs sm:text-sm text-white'>
                     HTML / Tailwind / Javascript
                 </p>
 
@@ -192,7 +192,7 @@ const Projects = () => {
                     { lang == "es" ? PROJECTS_LIBRARY_ES: PROJECTS_LIBRARY_EN }
                 </p>
 
-                <p className='py-2 text-xs sm:text-sm'>
+                <p className='py-2 text-xs sm:text-sm text-white'>
                     React / Tailwind / Redux / React Router / firebase / Vite
                 </p>
 
@@ -226,7 +226,7 @@ const Projects = () => {
                     { lang == "es" ? PROJECTS_CURSOS_ES: PROJECTS_CURSOS_EN }
                 </p>
 
-                <p className='py-2 text-xs sm:text-sm'>
+                <p className='py-2 text-xs sm:text-sm text-white'>
                     React / Tailwind / Redux / React Router / firebase / Vite
                 </p>
 
@@ -260,8 +260,8 @@ const Projects = () => {
                     { lang == "es" ? PROJECTS_SEGURIDAD_ES: PROJECTS_SEGURIDAD_EN }
                 </p>
 
-                <p className='py-2 text-xs sm:text-sm'>
-                    Python / Flask / Flask SQLAlchemy /
+                <p className='py-2 text-xs sm:text-sm text-white'>
+                    Python / Flask / Flask SQLAlchemy
                      / Flask Mail / PostgreSQL / SQLAlquemy Mixins
                      / React / Tailwind / Redux / React Router
                 </p>

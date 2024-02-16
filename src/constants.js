@@ -5,7 +5,7 @@ export const HERO_DEV_ES = "Desarrollador Web";
 export const HERO_DEV_EN = "Web Developer";
 
 export const CAREER_ES = "Tecnico en Informatica";
-export const CAREER_EN = "Informtatic";
+export const CAREER_EN = "Informatic";
 
 export const SKILLS_TITLE_ES = "Habilidades";
 export const SKILLS_TITLE_EN = "Skills";
