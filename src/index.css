@@ -8,12 +8,16 @@
   @apply cursor-default;
 }
 
-a {
-    @apply cursor-pointer;
+#icon,button,a {
+    @apply cursor-default;
 }
   
 
 @layer utilities {
+
+    .display-none {
+        display: none;
+    }
 
     .bg-art {
         background-image: url('src/images/fondo_bw.png');

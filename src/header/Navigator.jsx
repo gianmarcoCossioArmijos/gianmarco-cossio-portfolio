@@ -70,7 +70,7 @@ const Navigator = () => {
         <div className='w-1/2 flex gap-2 justify-start'>
           <button className='px-2 text-xl text-[#9336B4] bg-white rounded-full hover:opacity-80'
                   onClick={onClickTheme}>
-            { theme == "dark" ?  <MdDarkMode className='w-[30px] h-[30px] p-1'/> : <MdLightMode className='w-[30px] h-[30px] p-1'/> }
+            { theme == "dark" ?  <MdDarkMode id='icon' className='w-[30px] h-[30px] p-1'/> : <MdLightMode className='w-[30px] h-[30px] p-1'/> }
           </button>
 
           <button className='px-2 font-black text-xl text-[#9336B4] bg-white rounded-full hover:opacity-80'
@@ -80,16 +80,16 @@ const Navigator = () => {
         </div>
 
         <div className='w-1/2 flex gap-2 justify-end text-white'>
-          <a href="https://www.linkedin.com/in/marco-cossio-1a3b02296"
+          <a href="https://www.linkedin.com/in/gianmarco-armijos-cossio-1a3b02296"
             target='blank'
             className='hover:opacity-80'>
-            <SiLinkedin className='w-[30px] h-[30px]'/>
+            <SiLinkedin id='icon' className='w-[30px] h-[30px]'/>
           </a>
 
           <a href="https://github.com/gianmarcoCossioArmijos"
             target='blank'
             className='hover:opacity-80'>
-            <AiFillGithub className='w-[30px] h-[30px]'/>
+            <AiFillGithub id='icon' className='w-[30px] h-[30px]'/>
           </a>
         </div>
       </section>

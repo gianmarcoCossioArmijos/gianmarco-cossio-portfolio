@@ -59,7 +59,7 @@ const Skills = () => {
 
             { lang == "es" ? SKILLS_CONTACT_ES: SKILLS_CONTACT_EN }
             <a className='w-fit px-2 font-bold text-lg text-[#9336B4] hover:opacity-80'
-               href="https://www.linkedin.com/in/marco-cossio-1a3b02296"
+               href="https://www.linkedin.com/in/gianmarco-armijos-cossio-1a3b02296"
                target='blank'>
                 Linkedin
             </a>
